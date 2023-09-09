@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <unistd.h>
 
 using namespace std;
 
@@ -31,7 +33,8 @@ int main() {
 
         switch (userSelection) {
             case 1:
-                cout << "Opcion 1" << endl;
+                cout << "Mostrando redes..." << endl;
+                system(".././showConnections.sh");
                 break;
             case 2:
                 cout << "Opcion 2" << endl;
