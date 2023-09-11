@@ -1,6 +1,6 @@
 #!/bin/bash
 
-action=$(zenity --list --title="Gestión de Usuarios" --text="Selecciona una acción:" --column="Acción" "Agregar Usuario" "Eliminar Usuario" --width=300 --height=200 --hide-header)
+action=$(zenity --list --title="Gestión de Usuarios" --text="Selecciona una acción:" --column="Acción" "Agregar Usuario" "Eliminar Usuario" --width=350 --height=300 --hide-header)
 
 case $action in
   "Agregar Usuario")
@@ -20,7 +20,7 @@ case $action in
 
     all_users=$(getent passwd | cut -d: -f1)
 
-    user_to_delete=$(zenity --list --title="Eliminar Usuario" --text="Selecciona un usuario para eliminar:" --column="Usuarios" $all_users --width=300 --height=200 --hide-header)
+    user_to_delete=$(zenity --list --title="Eliminar Usuario" --text="Selecciona un usuario para eliminar:" --column="Usuarios" $all_users --width=400 --height=400 --hide-header)
 
     if [ $? -eq 1 ]; then
       zenity --info --title="Operación Cancelada" --text="No se ha eliminado ningún usuario."

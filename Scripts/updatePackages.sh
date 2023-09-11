@@ -20,3 +20,5 @@ run_command_with_confirmation "sudo -S apt update" "¿Deseas actualizar la lista
 run_command_with_confirmation "sudo -S apt upgrade -y" "¿Deseas actualizar los paquetes?"
 
 run_command_with_confirmation "sudo -S apt dist-upgrade -y" "¿Deseas actualizar el sistema?"
+
+exit 0
