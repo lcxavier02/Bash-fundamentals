@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <unistd.h>
 
 using namespace std;
 
@@ -34,37 +33,45 @@ int main() {
         switch (userSelection) {
             case 1:
                 cout << "Mostrando redes..." << endl;
-                system(".././showConnections.sh");
+                system("../Scripts/./showConnections.sh");
                 break;
             case 2:
-                cout << "Opcion 2" << endl;
+                cout << "Mostrando contenido de las interfaces..." << endl;
+                system("../Scripts/./showInterfaceContent.sh");
                 break;
             case 3:
-                cout << "Opcion 3" << endl;
+                cout << "Mostrando usuarios existentes..." << endl;
+                system("../Scripts/./showUsers.sh");
                 break;
             case 4:
-                cout << "Opcion 4" << endl;
+                cout << "Añadiendo o eliminando usuario..." << endl;
+                system("../Scripts/./addOrDeleteUser.sh");
                 break;
             case 5:
-                cout << "Opcion 5" << endl;
+                cout << "Mostrando los procesos..." << endl;
+                system("../Scripts/./showProcesses.sh");
                 break;
             case 6:
-                cout << "Opcion 6" << endl;
+                cout << "Deteniendo un proceso..." << endl;
+                system("../Scripts/./stopProcess.sh");
                 break;
             case 7:
-                cout << "Opcion 7" << endl;
+                cout << "Cambiando permisos..." << endl;
+                system("../Scripts/./changePermissions.sh");
                 break;
             case 8:
-                cout << "Opcion 8" << endl;
+                cout << "Cambiando propietario o grupo..." << endl;
+                system("../Scripts/./changeOwner.sh");
                 break;
             case 9:
-                cout << "Opcion 9" << endl;
+                cout << "Actualizando paquetes..." << endl;
+                system("../Scripts/./updatePackages.sh");
                 break;
             case 10:
-                cout << "Opcion 10" << endl;
+                cout << "Saliendo del programa...." << endl;
                 break;
             default:
-                cout << "Opcion default" << endl;
+                cout << "Ingresa una opcion del menu valida" << endl;
                 break;
         }
 
